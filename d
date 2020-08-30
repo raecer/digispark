@@ -1,16 +1,16 @@
-$Username = "bsfn.edu\op_jimmy";
+$Username = "bsfn.edu\op_jimmy"
 
-Function Button_Click(){;
-    Start-Process -FilePath "C:\Windows\System32\cmd.exe" -ArgumentList {/k gpupdate /force};
-};
+Function Button_Click(){
+    Start-Process -FilePath "C:\Windows\System32\cmd.exe" -ArgumentList {/k gpupdate /force}
+}
 
-Function Button2_Click(){;
-    netsh wlan delete profile name="bsf-edu";
-};
+Function Button2_Click(){
+    netsh wlan delete profile name="bsf-edu"
+}
 
-Function Button3_Click(){;
-    rundll32.exe SHELL32.DLL,SHHelpShortcuts_RunDLL AddPrinter;
-};
+Function Button3_Click(){
+    rundll32.exe SHELL32.DLL,SHHelpShortcuts_RunDLL AddPrinter
+}
 
 Function Button4_Click(){
     Start-Process -FilePath "C:\Windows\System32\cmd.exe" -ArgumentList {/c runas.exe /user:bsfn.edu\op_jimmy cmd}
